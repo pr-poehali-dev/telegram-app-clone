@@ -97,5 +97,41 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow: hidden;
+  }
+
+  #root {
+    height: 100vh;
+    height: 100dvh;
+  }
+}
+
+:root {
+  --messenger-bg: 0 0% 100%;
+  --messenger-sidebar: 0 0% 98%;
+  --messenger-hover: 210 40% 96%;
+  --messenger-active: 210 50% 93%;
+  --messenger-accent: 210 100% 52%;
+  --messenger-accent-foreground: 0 0% 100%;
+  --messenger-sent: 210 100% 95%;
+  --messenger-received: 0 0% 96%;
+  --messenger-online: 142 71% 45%;
+  --messenger-unread: 210 100% 52%;
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 3px;
   }
 }
